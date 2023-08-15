@@ -22,12 +22,12 @@ docker-compose up -d
 3. To access the site, use the following Docker run command:
 
 docker run -d -p 8001:80 --name my-wordpress wordpress
-(Note: If using an AWS EC2 instance, ensure that inbound rules allow traffic on port 8001.)
+(Note: If using an AWS EC2 instance, ensure that inbound rules allow traffic on port 8001 and access with local public_ip:8001)
 
 
 *Enabling and Disabling Sites
 
-4.To enable a site and start its containers, run:
+4. To enable a site and start its containers, run:
 python3 wp_site_manager.py enable Your_site_name
 
 
@@ -35,7 +35,7 @@ python3 wp_site_manager.py enable Your_site_name
 python3 wp_site_manager.py disable Your_site_name
 
 
-6.Deleting a Site
+6. Deleting a Site
 
 To completely delete a site, including its containers and files, run:
 python3 wp_site_manager.py delete Your_site_name
